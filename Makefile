@@ -8,7 +8,7 @@ all: webview.o
 	$(GPP) main.o webview.o $(CPPFLAGS) -o main
 
 webview.o:
-	$(GPP) -c -lstdc++ webview.cc $(CPPFLAGS) -o webview.o
+	$(GPP) -c webview.cc $(CPPFLAGS) -o webview.o
 
 clean:
 	rm -rf *.o
