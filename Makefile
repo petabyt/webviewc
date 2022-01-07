@@ -6,7 +6,7 @@ GPP=g++
 main: webview.o main.o
 	$(GPP) main.o webview.o $(CPPFLAGS) -o main
 
-main.o:
+main.o: main.c
 	$(CC) -c main.c -o main.o
 
 webview.o: webview.cc
