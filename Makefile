@@ -9,11 +9,11 @@ main: webview.o main.o
 main.o: main.c
 	$(CC) -c main.c -o main.o
 
-webview.o: webview.cc
+webview.o: webview.h
 	$(GPP) -c webview.cc $(CPPFLAGS) -o webview.o
 
-webview.cc:
-	wget https://raw.githubusercontent.com/webview/webview/master/webview.h -O webview.cc
+webview.h:
+	wget https://raw.githubusercontent.com/webview/webview/master/webview.h
 
 clean:
 	rm -rf *.o main
